@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f8f9fa;
+  font: size 2vh;
+}
+
+header {
+  background-color: #e1e7ed;
+  color: rgb(14, 12, 12);
+  padding: 10px 20px;
+}
+
+#logo {
+  height: 50px;
+  text-align: left;
+}
+
+/* Kartenmanagement */
+#card-management {
+  display:block;
+  
+  margin: 20px;
+}
+
+#card-management input {
+  padding: 10px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+/* Karten */
+#pile {
+  list-style: none;
+  padding: 0;
+}
+
+#pile li {
+  margin: 10px auto;
+  padding: 10px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: grab;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns:repeat(2, auto);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Linke Spalte: Kartenstapel */
+#left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#incoming-pile, #processed-pile {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+#incoming-pile h2, #processed-pile h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Kartenliste */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: grab;
+}
+
+/* Rechte Spalte: Priorisierungsmatrix */
+#right-panel {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#right-panel h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.matrix {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
+  gap: 10px;
+}
+.spielraum{
+  display: grid;
+  grid-template-columns: repeat(2, 50%); /* 2 Spalten */
+}
+
+.card {
+  padding: 10px;
+  margin: 5px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: grab;
+}
+
+.cell {
+  border: 2px dashed #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.cell:hover {
+  background-color: #e3e3e3;
+}
+
+#pile {
+  min-height: 100px;
+  border: 2px dashed #007bff;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f1f1f1;
+}

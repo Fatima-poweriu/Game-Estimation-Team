@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Estimation Game</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.svg"  height="7%" width="10%" alt="Logo" id="logo"  align="right">
+    <img src="logo-iu.png"  height="10%" width="10%" alt="Logo" id="logo1"  align="left" margin="10px">
+    <h1>Estimation Game</h1>
+  </header>
+
+  <main class="grid-container">
+      <!-- Kartenverwaltung -->
+      <div id="card-management">
+        <input type="text" id="new-card-text" placeholder="Neue Karte hinzufügen">
+        <button onclick="addCard()">Hinzufügen</button>
+        <button onclick="removeSelectedCard()">Entfernen</button>
+  
+    <!-- Linke Spalte: Kartenstapel -->
+      <div class="spielraum">
+    <div id="left-panel">
+         <!-- Kartenstapel -->
+    <section id="card-pile">
+      <h2>Kartenstapel</h2>
+      <ul id="pile" ondrop="dropCard(event)" ondragover="allowDrop(event)"></ul>
+    </section>
+
+
+    </div>
+  
+    <!-- Rechte Spalte: Priorisierungsmatrix -->
+    <div id="right-panel">
+      <h2>Priorisierungsmatrix</h2>
+     <div class="matrix" id="matrix">
+        <div class="cell" data-prio="must" ondrop="dropCard(event)" ondragover="allowDrop(event)">
+          Must-Have
+        </div>
+        <div class="cell" data-prio="should" ondrop="dropCard(event)" ondragover="allowDrop(event)">
+          Should-Have
+        </div>
+        <div class="cell" data-prio="could" ondrop="dropCard(event)" ondragover="allowDrop(event)">
+          Could-Have
+        </div>
+        <div class="cell" data-prio="wont" ondrop="dropCard(event)" ondragover="allowDrop(event)">
+          Won't-Have
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <footer class="footer">
+    <!-- Priorisierung beenden -->
+    <button id="end-prioritization">Priorisierung beendet</button>
+  
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
