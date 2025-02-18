@@ -121,6 +121,7 @@ li {
   border: 1px solid #ccc;
   border-radius: 4px;
   cursor: grab;
+  display: block !important; 
 }
 
 .cell {
@@ -133,6 +134,7 @@ li {
   align-items: center;
   justify-content: flex-start;
   padding: 10px;
+  overflow: visible;
 }
 
 .cell:hover {
